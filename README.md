@@ -1,2 +1,2 @@
-# WriteRight
+# Journalize
 Baller-ass, online journal 
