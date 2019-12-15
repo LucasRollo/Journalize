@@ -9,6 +9,8 @@ services:
     stdin_open: true
     tty: true
     command: python3 manage.py runserver 0.0.0.0:8000
+    environment:
+      - DJANGO_SETTINGS_MODULE=backend.settings.development
   frontend:
     build: ./frontend
     volumes:
