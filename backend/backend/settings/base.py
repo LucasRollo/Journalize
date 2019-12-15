@@ -16,6 +16,20 @@ import os
 BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../"))
 
 
+<<<<<<< HEAD:backend/backend/settings/base.py
+=======
+# Quick-start development settings - unsuitable for production
+# See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
+
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = '+1@-^5q$qt*wu(m%fl0owx-cdlp-1^knh&roo_@c3wg$(2@rm='
+
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = True
+
+ALLOWED_HOSTS = ["backend","localhost"]
+
+>>>>>>> 7134e62d6427235fb09acc043e36598a943d4ec7:backend/backend/settings.py
 
 # Application definition
 
