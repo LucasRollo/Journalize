@@ -1,2 +1,2 @@
 # Journalize
-online journal created to aid in personal reflection through sentiment analysis and encourage the habit of daily journaling. 
+online journal created to aid in personal reflection through text analysis and encourage the habit of daily journaling. 
