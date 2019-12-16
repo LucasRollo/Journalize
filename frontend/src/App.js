@@ -16,10 +16,6 @@ function App() {
   return (
     <div className="App">
       <div>
-<<<<<<< HEAD
-=======
-        <br/>
->>>>>>> 7134e62d6427235fb09acc043e36598a943d4ec7
         <label htmlFor='char-input'>How many characters does</label>
         <input id='char-input' type='text' />
         <button onClick={handleSubmit}>have?</button>
