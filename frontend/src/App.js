@@ -1,23 +1,20 @@
 import React from 'react';
-import Login from './components/Login';
+import 'antd/dist/antd.css';
 import axios from 'axios';
 import './App.css';
 
+import CustomLayout from "./containers/CustomLayout";
+import ArticleList from "./containers/ArticleList";
+
 function App() {
   return (
-    <div className="App">
-
-      <div>
-        <label htmlFor='char-input'>How many characters does</label>
-        <input id='char-input' type='text' />
-        <button>have?</button>
-      </div>
-
-      <div>
-        <h3 id='char-count'></h3>
-      </div>
+    <div>
+      <CustomLayout>
+        <ArticleList />
+      </CustomLayout>
     </div>
   );
 }
 
 export default App;
+

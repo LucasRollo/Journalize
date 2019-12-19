@@ -27,9 +27,12 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'char_count.apps.CharCountConfig',
     'rest_framework',
+    'articles',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -112,3 +115,7 @@ STATIC_URL = '/static/'
 
 # Redirect to home URL after login (Default redirects to /accounts/profile/)
 LOGIN_REDIRECT_URL = '/'
+
+
+#Gets Cors Headers to work
+CORS_ORIGIN_ALLOW_ALL = True

@@ -20,9 +20,17 @@ from char_count.views import char_count
 
 
 urlpatterns = [
-    path('', TemplateView.as_view(template_name='home.html'), name='home'),
+    #Gets Django Rest Framework to work
+    path('api-auth/', include('rest_framework.urls')),
+
+    #Root
+    path('', TemplateView.as_view(template_name='index.html'), name='home'),
+
+    #Admin page
     path('admin/', admin.site.urls),
-    path('accounts/', include('django.contrib.auth.urls')),
-    path('char_count', char_count, name='char_count'),
+
+    #api path for articles api
+    path('api/', include('articles.api.urls')),
+    #If route fails, do this
     re_path('.*', TemplateView.as_view(template_name='index.html')),
 ]
