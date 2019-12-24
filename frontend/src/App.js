@@ -1,17 +1,20 @@
 import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import BaseRouter from './routes'
 import 'antd/dist/antd.css';
-import axios from 'axios';
 import './App.css';
 
 import CustomLayout from "./containers/CustomLayout";
-import ArticleList from "./containers/ArticleList";
+
 
 function App() {
   return (
-    <div>
-      <CustomLayout>
-        <ArticleList />
-      </CustomLayout>
+    <div className="App">
+      <Router>
+        <CustomLayout>
+          <BaseRouter />
+        </CustomLayout>
+      </Router>
     </div>
   );
 }

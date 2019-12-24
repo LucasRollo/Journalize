@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import Article from "../components/Article";
+import CustomForm from "../components/Form";
 import axios from "axios";
 
 
@@ -18,7 +19,15 @@ function ArticleList() {
          setGotData(true);
     }
 
-  return <Article data={articles}/>;
+  return (
+    <div>
+      <Article data={articles} />
+      <br />
+      <h2>Create an article</h2>
+      <CustomForm/>
+    </div>
+    );
+
 }
 
 // class ArticleList extends React.Component{
