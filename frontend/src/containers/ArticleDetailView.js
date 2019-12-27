@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import axios from "axios";
-import { Card } from 'antd';
+import { Button, Card } from 'antd';
 
 import CustomForm from "../components/Form"
 
@@ -21,12 +21,19 @@ function ArticleDetail(props) {
          setGotData(true);
     }
 
+    function handleDelete(){
+        axios.delete(`http://localhost:8000/api/${articleID}/`)
+    }
+
   return (
     <div>
         <Card title={article.title}>
             <p>{article.content}</p>
         </Card>
-        <CustomForm />
+        <CustomForm requestType="put" articleID={props.match.params.articleID} buttonText="Update" />
+        <form onSubmit={handleDelete} >
+            <Button type="danger" htmlType="submit">Delete</Button>
+        </form>
     </div>
   
   );

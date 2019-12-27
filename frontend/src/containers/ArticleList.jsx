@@ -5,11 +5,13 @@ import axios from "axios";
 
 
 function ArticleList() {
+   
     const [articles, setArticles] = useState([]);
+
     //Try to find a better way to do this?
     const [gotData, setGotData] = useState(false);
 
-    // Current Problem: if a boolean isn't checked, there will be an infinite loop of API calls
+    //Current Problem: if a boolean isn't checked, there will be an infinite loop of API calls
     if (!gotData){
         axios.get('http://localhost:8000/api/')
         .then(res => {
@@ -19,12 +21,20 @@ function ArticleList() {
          setGotData(true);
     }
 
+    // function handleChange() {
+    //   axios.get('http://localhost:8000/api/')
+    //     .then(res => {
+    //         setArticles(res.data);
+    //      });
+
+    // }
+
   return (
     <div>
       <Article data={articles} />
       <br />
       <h2>Create an article</h2>
-      <CustomForm/>
+      <CustomForm requestType="post" articleID={null} buttonText="Create" />
     </div>
     );
 
